@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<title>Tabbox</title>	
+		<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/combo?2.8.0r4/build/reset/reset-min.css&2.8.0r4/build/base/base-min.css">
+		<style type="text/css">
+			body { width:1200px; margin:0; padding:10px; }
+			.yui-navset { width:500px; float:left; margin-right:10px; }
+		</style>
+		<script type="text/javascript" src="http://yui.yahooapis.com/combo?2.8.0r4/build/yuiloader-dom-event/yuiloader-dom-event.js"></script> 
+	</head>
+	<body class=" yui-skin-sam">
+		<div id="demo1" class="yui-navset">
+		    <ul class="yui-nav">
+		        <li><a href="#demo1-tab1"><em>Tab One Label</em></a></li>
+		        <li class="selected"><a href="#demo1-tab2"><em>Tab Two Label</em></a></li>
+		        <li><a href="#demo1-tab3"><em>Tab Three Label</em></a></li>
+		    </ul>            
+		    <div class="yui-content">
+		        <div id="demo1-tab1"><p>Tab One Content</p></div>
+		        <div id="demo1-tab2"><p>Tab Two Content</p></div>
+		        <div id="demo1-tab3"><p>Tab Three Content</p></div>
+		    </div>
+		</div>
+		<script type="text/javascript">
+			YAHOO.util.Get.script(
+				"http://sentientbit.com/sandbox/tabbox/js/tabView.js",
+				{ 
+					onSuccess: function() {
+						new YAHOO.SentientBit.tabbox.TabView("demo1", [ { "name": YAHOO.SentientBit.tabbox.TabViewRotation, "params": {"rate":"2000"} } ], {"heightMode": "200"});
+					},
+					onFailure: function() { console.log("could not load http://sentientbit.com/sandbox/tabbox/js/tabView.js"); }
+			    }
+			);
+		</script>
+		
+		<div id="demo2" class="yui-navset">
+		    <ul class="yui-nav">
+		        <li><a href="#demo2-tab1"><em>Tab One Label</em></a></li>
+		        <li class="selected"><a href="#demo2-tab2"><em>Tab Two Label</em></a></li>
+		        <li><a href="#demo2-tab3"><em>Tab Three Label</em></a></li>
+		        <li><a href="#demo2-tab4"><em>Tab Four Label</em></a></li>
+		    </ul>            
+		    <div class="yui-content">
+		        <div id="demo2-tab1"><p>Tab One Content</p></div>
+		        <div id="demo2-tab2"><p>Tab Two Content</p></div>
+		        <div id="demo2-tab3"><p>Tab Three Content</p></div>
+		        <div id="demo2-tab4"><p>Tab Four Content</p></div>
+		    </div>
+		</div>
+		<script type="text/javascript">
+			YAHOO.util.Get.script(
+				"http://sentientbit.com/sandbox/tabbox/js/tabView.js",
+				{ 
+					onSuccess: function() {
+						new YAHOO.SentientBit.tabbox.TabView("demo2", [ { "name": YAHOO.SentientBit.tabbox.TabViewRotation, "params": {"rate":"1500"} } ], {"heightMode": "150"});
+					},
+					onFailure: function() { console.log("could not load http://sentientbit.com/sandbox/tabbox/js/tabView.js"); }
+			    }
+			);
+		</script>
+		
+	</body>
+</html>
